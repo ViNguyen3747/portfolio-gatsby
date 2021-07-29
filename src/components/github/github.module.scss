@@ -1,5 +1,19 @@
 @import '../../styles/global';
 
+@mixin box($color: #fff) {
+    @media only screen and (min-width: 600px) {
+        width: 100%;        
+    }
+    border-radius: 5px;
+    border: 2px solid $color;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px 10px 20px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: $fontStyle;
+}
+
 .container {
     @media only screen and (min-width: 690px) {
         display: grid;
@@ -7,43 +21,26 @@
         grid-gap: 30px;
     }
 }
-.content {
-    @media only screen and (min-width: 600px) {
-        width: 100%;        
-    }    
-   border-radius: 5px;
-   border: 2px solid black;
-   margin: 0 auto;
-   margin-bottom: 10px;
-   padding: 10px;
-   font-size: 16px;
-   font-family: $fontStyle;
    
-   .title {
-        margin-bottom: 8px;
-        margin-top: 0;
-        font-size: 1.4rem;
-        font-weight: bold;
-        text-transform: capitalize;
-   } 
-   .row {
-       display: flex;
-       justify-content: flex-start;
-       font-size: 0.8em;
-        .circle {
-            border-radius: 50%;
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            position: relative;
-            margin-left: 10px;
-            margin-right: 4px;
-        }
-    }
+.gloomyBox {
+    @include box($color-pallete-5)
+}   
+.sunnyBox {
+    @include box($color-pallete-2)
+}
 
-    .date {
-        display: flex;
-        justify-content: space-evenly;
-        font-size: 0.8em;
-    }
+.row {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.8em;
+}
+
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 4px;
 }

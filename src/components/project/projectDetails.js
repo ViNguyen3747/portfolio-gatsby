@@ -9,7 +9,9 @@ const Detail = ({ project }) => {
 
     return (
         <div className={styles.container}>
-            <Img className={styles.img} fluid={project.frontmatter.image.childImageSharp.fluid} alt="project photo" />
+            <a href={project.frontmatter.link} target="_blank" rel="noopener noreferrer">
+                <Img className={styles.img} fluid={project.frontmatter.image.childImageSharp.fluid} alt="project photo" />
+            </a>
             <h2 className={styles.title}>{project.frontmatter.title}</h2>
             <div>
                 {tags.map((tag) => (

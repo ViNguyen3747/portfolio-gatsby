@@ -4,10 +4,11 @@ import * as styles from './header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faCloud } from '@fortawesome/free-solid-svg-icons'
 import { useThemeContext } from '../../context/ThemeContext'
+import { gloomyLink, sunnyLink } from '../../../styles/link.module.scss'
 
-const HeaderLink = (props) => (
-    <Link className={props.theme === 'gloomy' ? styles.gloomyLink : styles.sunnyLink}
-        activeClassName={props.theme === 'gloomy' ? styles.activeGloomy : styles.activeSunny} to={props.to} ><span> {props.text} </span> </Link>
+const HeaderLink = ({ to, text, theme }) => (
+    <Link className={theme === 'gloomy' ? gloomyLink : sunnyLink}
+        activeClassName={theme === 'gloomy' ? styles.activeGloomy : styles.activeSunny} to={to} ><span> {text} </span> </Link>
 )
 
 const Header = () => {

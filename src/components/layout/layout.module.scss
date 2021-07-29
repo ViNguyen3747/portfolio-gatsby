@@ -13,13 +13,9 @@
     .content {
     max-width: $site-width;
     margin:0 auto;
-
-    @media screen and (min-width: 1px) and (max-width: 1000px) {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    }
+      @media screen and (min-width: 1px) and (max-width: 1000px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }    
   }
-
-

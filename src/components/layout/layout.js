@@ -3,22 +3,24 @@ import * as styles from './layout.module.scss'
 import Header from './header/header'
 import Footer from './footer/footer'
 import { useThemeContext } from '../context/ThemeContext'
-
+import { scrollbar } from '../../styles/scrollbar.module.scss'
 const Layout = ({ children }) => {
     const [theme] = useThemeContext();
     return (
-        <div className={styles.container}>
-            <div className={theme === 'gloomy'
-                ? styles.gloomy : null}>
-                <div>
-                    <Header />
-                    <div className={styles.content}>
-                        {children}
+        <body className={scrollbar}>
+            <div className={styles.container}>
+                <div className={theme === 'gloomy'
+                    ? styles.gloomy : null}>
+                    <div>
+                        <Header />
+                        <div className={styles.content}>
+                            {children}
+                        </div>
+                        <Footer />
                     </div>
-                    <Footer />
                 </div>
             </div>
-        </div>
+        </body>
     )
 }
 

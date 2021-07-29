@@ -4,7 +4,7 @@ import Detail from './projectDetails';
 import { useStaticQuery, graphql } from "gatsby"
 
 const Project = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
         allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"}}) {
           edges {
@@ -19,25 +19,26 @@ const Project = () => {
                     }
                   }
                 }
+                link
               }
             }
           }
         }
       }
     `)
-    const projects = data.allMarkdownRemark.edges
-    console.log(projects)
-    return (
-        <Carousel variant="dark">
-            {projects.map(p => (
-                <Carousel.Item>
-                    <Detail project={p.node} />
-                </Carousel.Item>
-            ))}
+  const projects = data.allMarkdownRemark.edges
+  console.log(projects)
+  return (
+    <Carousel variant="dark">
+      {projects.map(p => (
+        <Carousel.Item>
+          <Detail project={p.node} />
+        </Carousel.Item>
+      ))}
 
 
-        </Carousel>
-    )
+    </Carousel>
+  )
 }
 
 export default Project

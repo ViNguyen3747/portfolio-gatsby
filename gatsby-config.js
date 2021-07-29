@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -43,6 +44,21 @@ module.exports = {
 
       },
     },
+    {
+      resolve: `gatsby-plugin-scroll-indicator`,
+      options: {
+        // set the color you want for your progress bar here
+        color: '#ffd858',
+        // set the height of the scroll indicator
+        height: '4px',
+        // Set specific paths where you want the scroll indicator using regex
+        paths: ['/', '/works'],
+        // Configure the z-index of the indicator element
+        zIndex: `9999`,
+      },
+    },
+
+
 
   ]
 }
