@@ -1,0 +1,25 @@
+@import '../../styles/global';
+
+ .container {  
+  min-height:100vh;
+  background-color: $color-pallete-1;
+  padding: 0;
+  color: black;
+    .gloomy {
+    background-color: $color-pallete-3;
+    min-height:100vh;
+    color: white;
+    }
+    .content {
+    max-width: $site-width;
+    margin:0 auto;
+
+    @media screen and (min-width: 1px) and (max-width: 1000px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    }
+  }
+
+

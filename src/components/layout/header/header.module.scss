@@ -1,0 +1,98 @@
+@import '../../../styles/global';
+
+@mixin link($color: #fff, $letterColor: black) {
+  color: $letterColor;    
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 3px;
+  margin: 10px;
+  transition: all .5s ease-out;
+  will-change: transform;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $color;
+    transform: scale(0, 1); //scale(x, y)
+    transform-origin: 0% 100%;
+    will-change: transform;
+    transition: transform 0.8s cubic-bezier(0, 1, 0.22, 1);
+
+  }
+  &:hover:after {
+    background-color: $color;
+    transform: scale(1);
+    transition: transform 1s cubic-bezier(0, 1, 0.22, 1), background-color 0.2s ease-out, 
+  }
+}
+
+.container {
+  max-width: $site-width;
+  min-height: 140px;
+  margin: 0 auto;
+  padding-top: 30px;
+
+  .row {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .gloomyLink {    
+    @include link($color-pallete-5, $color-pallete-5)    
+  }
+
+  .sunnyLink {
+    @include link($color-pallete-2)    
+
+  }
+  .activeSunny {
+    color: $color-pallete-2;
+    
+  }
+  .activeGloomy {
+    color: $color-pallete-1;
+  }
+  .theme{
+    padding: 10px;  
+    .sunny {
+    color:  $color-pallete-2;
+    animation: sunRotation 8s linear infinite;
+    }
+
+    .gloomy {
+    color: $color-pallete-5;
+    animation: cloudMove 4s ease-in-out infinite;
+
+    }
+  }
+
+
+  .deactive {
+    color: $color-pallete-4;
+  } 
+
+}
+@keyframes sunRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes cloudMove {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }  
+  50% {
+    transform: translate(10px, 0);
+  }
+}  
