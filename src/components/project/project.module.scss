@@ -1,18 +1,17 @@
 @import '../../styles/global';
 
-
 .container {
     align-items: center;
     text-align: center;
     justify-content: center;
     width: 100%;
-    padding-bottom: 40px;
-
-    .title{
-        font-family: $fontStyle;
-    }
-    .img {
-        margin: 0 10vw 20px 10vw;
-    }  
-    
+    padding-bottom: 40px;   
 }
+.title{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: $fontStyle;
+}
+.img {
+    margin: 0 10vw 20px 10vw;
+}  

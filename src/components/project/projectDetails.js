@@ -2,18 +2,18 @@ import React from "react"
 import Img from "gatsby-image"
 import { useThemeContext } from '../context/ThemeContext'
 import { tagSunny, tagGloomy } from '../../styles/tag.module.scss'
-import * as styles from './project.module.scss'
+import { container, img, title } from './project.module.scss'
 
 const Detail = ({ project }) => {
     const tags = project.frontmatter.tags;
     const [theme] = useThemeContext()
 
     return (
-        <div className={styles.container}>
+        <div className={container}>
             <a href={project.frontmatter.link} target="_blank" rel="noopener noreferrer">
-                <Img className={styles.img} fluid={project.frontmatter.image.childImageSharp.fluid} alt="project photo" />
+                <Img className={img} fluid={project.frontmatter.image.childImageSharp.fluid} alt="project photo" />
             </a>
-            <h2 className={styles.title}>{project.frontmatter.title}</h2>
+            <div className={title}>{project.frontmatter.title}</div>
             <div>
                 {tags.map((tag, index) => (
                     <span key={index} className={theme === 'sunny' ? tagSunny : tagGloomy}>{tag}</span>

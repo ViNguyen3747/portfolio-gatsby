@@ -1,4 +1,4 @@
-@import './global';
+@import '../styles/global';
 
 @mixin link($color: #fff, $letterColor: black) {
   color: $letterColor;    

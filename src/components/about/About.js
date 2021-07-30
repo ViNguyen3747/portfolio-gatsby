@@ -1,24 +1,25 @@
 import React from "react"
 import Img from "gatsby-image"
-import * as styles from "./about.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 import { useThemeContext } from '../context/ThemeContext'
 import { tagSunny, tagGloomy } from '../../styles/tag.module.scss'
+import { container, title, text, img, subtitle } from "./about.module.scss"
+
 const Detail = ({ info, theme }) => {
   const detail = info[0].node
   return (
-    <div className={styles.container}>
+    <div className={container}>
       <div>
-        <div className={styles.title}>{detail.frontmatter.title}</div>
-        <div className={styles.text} dangerouslySetInnerHTML={{ __html: detail.html }} />
+        <div className={title}>{detail.frontmatter.title}</div>
+        <div className={text} dangerouslySetInnerHTML={{ __html: detail.html }} />
         <div>
           {detail.frontmatter.tags.map((tag, index) =>
             <div key={index} className={theme === 'sunny' ? tagSunny : tagGloomy}>{tag}</div>)}
         </div>
       </div>
       <div>
-        <Img className={styles.img} fluid={detail.frontmatter.image.childImageSharp.fluid} alt="user photo" />
-        <div className={styles.subtitle}>{detail.frontmatter.subtitle}</div>
+        <Img className={img} fluid={detail.frontmatter.image.childImageSharp.fluid} alt="user photo" />
+        <div className={subtitle}>{detail.frontmatter.subtitle}</div>
       </div>
 
     </div>

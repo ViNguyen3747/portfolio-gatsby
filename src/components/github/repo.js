@@ -1,7 +1,7 @@
 import React from 'react'
-import { sunnyBox, gloomyBox, circle, row } from './github.module.scss'
-import { gloomyLink, sunnyLink } from '../../styles/link.module.scss'
 import { useThemeContext } from '../context/ThemeContext'
+import { gloomyLink, sunnyLink } from '../../styles/link.module.scss'
+import { sunnyBox, gloomyBox, circle, row } from './github.module.scss'
 
 const Link = ({ name, link, theme }) => (
     <a href={link} target="_blank" rel="noopener noreferrer">

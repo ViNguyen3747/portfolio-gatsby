@@ -8,32 +8,33 @@
     grid-template-columns: 1fr 1.25fr;
     grid-gap: 100px;
     text-align: left;
-  }
-  .img {
-    border-radius: 5px;
-    width: 100%;    
-    animation: movein 1s ease-in-out;
-  }
+  }  
+}
 
-  
-  .text {
-    font-size: 1.2rem;
-    line-height: 2;
-    text-transform: capitalize;
+.img {
+  border-radius: 5px;
+  width: 100%;    
+  animation: movein 1s ease-in-out;
+}
 
-  }
 
-  .title {
+.text {
+  font-size: 1.2rem;
+  line-height: 2;
+  text-transform: capitalize;
+
+}
+
+.title {
   font-size: 2.5rem;
   font-weight: bolder;
   text-transform: capitalize;
-  }
+}
 
-  .subtitle {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-align: center;
-  }
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 @keyframes movein{

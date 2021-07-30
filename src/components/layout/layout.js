@@ -1,8 +1,8 @@
 import React from 'react'
-import * as styles from './layout.module.scss'
+import { useThemeContext } from '../context/ThemeContext'
 import Header from './header/header'
 import Footer from './footer/footer'
-import { useThemeContext } from '../context/ThemeContext'
+import * as styles from './layout.module.scss'
 
 const Layout = ({ children }) => {
     const [theme] = useThemeContext();

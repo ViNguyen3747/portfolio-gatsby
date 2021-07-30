@@ -1,6 +1,6 @@
 import React from "react"
-import About from "../components/about/About";
 import Layout from "../components/layout/layout"
+import About from "../components/about/About";
 const Home = () => {
 
   return (
