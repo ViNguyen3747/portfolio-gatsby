@@ -45,7 +45,9 @@ const About = () => {
   const info = data.allMarkdownRemark.edges
 
   return (
-    <Detail info={info.filter(e => e.node.frontmatter.category === theme)} />
+    <>
+      <Detail info={info.filter(e => e.node.frontmatter.category === theme)} />
+    </>
 
 
 

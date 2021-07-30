@@ -15,9 +15,9 @@ const Repo = ({ repo }) => {
         <div className={theme === 'sunny' ? sunnyBox : gloomyBox}>
             <Link name={repo.name} link={repo.url} theme={theme} />
             <div className={row}>
-                {repo.languages.nodes.map(l =>
+                {repo.languages.nodes.map((l, index) =>
                     <div>
-                        <span className={circle} style={{ backgroundColor: l.color }} />
+                        <span className={circle} key={index} style={{ backgroundColor: l.color }} />
                         {l.name}
                     </div>)}
             </div>

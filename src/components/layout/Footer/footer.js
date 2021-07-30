@@ -15,6 +15,7 @@ const Footer = () => {
         <footer className={styles.container}>
             <Link platform="linkedin" link="https://www.linkedin.com/in/thi-kieu-vi-nguyen-0894a919a/" theme={theme} />
             <Link platform="github" link="https://github.com/ViNguyen3747" theme={theme} />
+            <a href="/Vi_Resume.pdf" target="_blank" className={theme === 'sunny' ? sunnyLink : gloomyLink}>RESUME</a>
         </footer>
     )
 }

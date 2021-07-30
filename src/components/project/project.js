@@ -30,8 +30,8 @@ const Project = () => {
   console.log(projects)
   return (
     <Carousel variant="dark">
-      {projects.map(p => (
-        <Carousel.Item>
+      {projects.map((p, index) => (
+        <Carousel.Item key={index}>
           <Detail project={p.node} />
         </Carousel.Item>
       ))}
