@@ -1,7 +1,8 @@
 @import '../../styles/global';
 
 .container {
-  text-align: center;
+  text-align: center;  
+  font-family:  $fontStyle;
   @media only screen and (min-width: 60em) {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
@@ -10,23 +11,28 @@
   }
   .img {
     border-radius: 5px;
-    margin-bottom: 40px;
     width: 100%;    
     animation: movein 1s ease-in-out;
   }
+
+  
   .text {
     font-size: 1.2rem;
     line-height: 2;
     text-transform: capitalize;
-    font-family: $fontStyle;
 
   }
 
   .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bolder;
   text-transform: capitalize;
-  font-family:  $fontStyle;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
   }
 }
 

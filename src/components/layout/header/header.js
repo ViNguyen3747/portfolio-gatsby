@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react'
 import { Link } from 'gatsby'
-import * as styles from './header.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun, faCloud } from '@fortawesome/free-solid-svg-icons'
 import { useThemeContext } from '../../context/ThemeContext'
 import { gloomyLink, sunnyLink } from '../../../styles/link.module.scss'
+import * as styles from './header.module.scss'
 
 const HeaderLink = ({ to, text, theme }) => (
     <Link className={theme === 'gloomy' ? gloomyLink : sunnyLink}

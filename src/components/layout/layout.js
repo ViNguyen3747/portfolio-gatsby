@@ -3,7 +3,6 @@ import * as styles from './layout.module.scss'
 import Header from './header/header'
 import Footer from './footer/footer'
 import { useThemeContext } from '../context/ThemeContext'
-import '../../styles/scrollbar.scss'
 
 const Layout = ({ children }) => {
     const [theme] = useThemeContext();

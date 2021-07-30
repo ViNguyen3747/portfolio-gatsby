@@ -8,14 +8,19 @@ const Detail = ({ info, theme }) => {
   const detail = info[0].node
   return (
     <div className={styles.container}>
-      <div className={styles.title}>{detail.frontmatter.title}
+      <div>
+        <div className={styles.title}>{detail.frontmatter.title}</div>
         <div className={styles.text} dangerouslySetInnerHTML={{ __html: detail.html }} />
         <div>
           {detail.frontmatter.tags.map((tag, index) =>
             <div key={index} className={theme === 'sunny' ? tagSunny : tagGloomy}>{tag}</div>)}
         </div>
       </div>
-      <Img className={styles.img} fluid={detail.frontmatter.image.childImageSharp.fluid} alt="user photo" />
+      <div>
+        <Img className={styles.img} fluid={detail.frontmatter.image.childImageSharp.fluid} alt="user photo" />
+        <div className={styles.subtitle}>{detail.frontmatter.subtitle}</div>
+      </div>
+
     </div>
   )
 }
@@ -38,7 +43,8 @@ const About = () => {
               }
             }
           }
-          tags
+          tags,
+          subtitle
         }
       }
     }

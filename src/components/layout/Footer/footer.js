@@ -1,7 +1,7 @@
 import React from "react"
-import * as styles from "./footer.module.scss"
 import { useThemeContext } from '../../context/ThemeContext'
 import { gloomyLink, sunnyLink } from '../../../styles/link.module.scss'
+import * as styles from "./footer.module.scss"
 
 const Link = ({ platform, link, theme }) => (
     <a href={link} target="_blank" rel="noopener noreferrer">
