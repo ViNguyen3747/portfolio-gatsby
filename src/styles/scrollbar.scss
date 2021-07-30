@@ -1,5 +1,8 @@
 @import './global';
 
+body {
+  overflow-x: hidden;
+}
 body::-webkit-scrollbar {
   width: 12px;               
 }
@@ -10,5 +13,6 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: $color-pallete-2;
+  border-radius: 10px;
   border: 3px solid $color-pallete-3;  
 }

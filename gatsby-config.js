@@ -6,7 +6,11 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    defaultTheme: 'sunny'
+    title: 'Portfolio with Gatsby JS',
+    author: 'Thi Kieu Vi Nguyen',
+    description: 'Building Portfolio with Gatsby JS and custom theme using React Context',
+    image: '/me.jpg',
+
   },
   plugins: [
     `gatsby-plugin-sass`,
