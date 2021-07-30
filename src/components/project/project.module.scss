@@ -1,16 +1,6 @@
 @import '../../styles/global';
 
-@mixin tag($color: #fff) {
-    background: $color;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 10px;
-    border-radius: 5px;
-    padding: 6px 8px;
-    margin:0 10px 10px 0;
-    display: inline-block;
-}
+
 .container {
     align-items: center;
     text-align: center;
@@ -23,15 +13,6 @@
     }
     .img {
         margin: 0 10vw 20px 10vw;
-    }
-
-    .tagSunny{
-        @include tag($color-pallete-2);
-    }
-
-    .tagGloomy {
-        @include tag($color-pallete-5);   
-    }
-    
+    }  
     
 }
