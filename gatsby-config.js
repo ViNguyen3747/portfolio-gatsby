@@ -7,9 +7,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: 'Portfolio with Gatsby JS',
-    author: 'Thi Kieu Vi Nguyen',
+    author: '@ThiKieuViNguye1',
     description: 'Building Portfolio with Gatsby JS and custom theme using React Context',
     image: '/me.jpg',
+    url: 'https://vi-portfolio.netlify.app/',
+    keywords: 'portfolio, GatsbyJS, ReactJS, BootStrap,Custom Theme'
 
   },
   plugins: [
@@ -18,6 +20,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
