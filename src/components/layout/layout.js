@@ -6,6 +6,7 @@ import * as styles from './layout.module.scss'
 
 const Layout = ({ children }) => {
     const [theme] = useThemeContext();
+
     return (
         <div className={styles.container}>
             <div className={theme === 'gloomy'
