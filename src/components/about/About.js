@@ -6,7 +6,8 @@ import { tagSunny, tagGloomy } from '../../styles/tag.module.scss'
 import { container, title, text, img, subtitle } from "./about.module.scss"
 
 const Detail = ({ info, theme }) => {
-  const detail = info[0].node
+  const detail = info.node
+  console.log(info.node);
   return (
     <div className={container}>
       <div>
@@ -58,11 +59,8 @@ const About = () => {
 
   return (
     <>
-      <Detail info={info.filter(e => e.node.frontmatter.category === theme)} theme={theme} />
+      <Detail info={info.find(e => e.node.frontmatter.category === theme)} theme={theme} />
     </>
-
-
-
   )
 }
 
