@@ -10,7 +10,7 @@ module.exports = {
     author: '@ThiKieuViNguye1',
     description: 'Building Portfolio with Gatsby JS and custom theme using React Context',
     image: '/me.jpg',
-    url: 'https://vi-portfolio.netlify.app/',
+    url: 'https://vi-portfolio.netlify.app',
     keywords: 'portfolio, GatsbyJS, ReactJS, BootStrap,Custom Theme'
 
   },
