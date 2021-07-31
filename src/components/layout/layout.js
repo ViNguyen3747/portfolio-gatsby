@@ -1,7 +1,7 @@
 import React from 'react'
 import { useThemeContext } from '../context/ThemeContext'
 import Header from './header/header'
-import Footer from './footer/footer'
+import Footer from './Footer/footer'
 import * as styles from './layout.module.scss'
 
 const Layout = ({ children }) => {
