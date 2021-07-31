@@ -6,6 +6,7 @@ import { tagSunny, tagGloomy } from '../../styles/tag.module.scss'
 import { container, title, text, img, subtitle } from "./about.module.scss"
 
 const Detail = ({ info, theme }) => {
+
   const detail = info.node
   console.log(info.node);
   return (
@@ -56,6 +57,7 @@ const About = () => {
   )
 
   const info = data.allMarkdownRemark.edges
+  console.log(info)
 
   return (
     <>
