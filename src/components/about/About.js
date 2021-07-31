@@ -45,7 +45,7 @@ const About = () => {
               }
             }
           }
-          tags,
+          tags
           subtitle
         }
       }
