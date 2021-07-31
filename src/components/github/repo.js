@@ -17,7 +17,7 @@ const Repo = ({ repo }) => {
             <div className={row}>
                 {repo.languages.nodes.map((l, index) =>
                     <div>
-                        <span className={circle} key={index} style={{ backgroundColor: l.color }} />
+                        <span className={circle} key={l.color} style={{ backgroundColor: l.color }} />
                         {l.name}
                     </div>)}
             </div>

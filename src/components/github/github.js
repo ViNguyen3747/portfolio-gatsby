@@ -37,7 +37,6 @@ const Repos = () => {
   `)
 
   const repos = data.allGithubData.edges[0].node.data.viewer.repositories.edges;
-  console.log(repos);
   return (
     <div className={container} >
       {repos.map((repo, index) => <Repo key={index} repo={repo.node} />)}

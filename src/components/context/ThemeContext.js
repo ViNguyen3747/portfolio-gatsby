@@ -1,23 +1,17 @@
-import React, { useState, createContext, useContext, useMemo } from 'react'
-
+import React, { createContext, useContext, useMemo } from 'react'
+import useLocalStorage from './useLocalStorage'
 const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
-    // const defaultThemeState = (typeof window !== 'undefined' && window.localStorage.getItem('theme')) || 'sunny'
-
-    // const [theme, setTheme] = useState(defaultThemeState)
-    const [theme, setTheme] = useState('sunny')
+    const [theme, setTheme] = useLocalStorage('theme', 'sunny')
 
     const handler = useMemo(
         () => ({
             lighten: () => {
                 setTheme('sunny')
-                typeof window !== 'undefined' && window.localStorage.setItem('theme', 'sunny')
             },
             darken: () => {
                 setTheme('gloomy')
-                typeof window !== 'undefined' && window.localStorage.setItem('theme', 'gloomy')
-
             }
         }),
         []
