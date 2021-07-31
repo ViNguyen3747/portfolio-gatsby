@@ -22,7 +22,7 @@ const Header = () => {
                 </div>
                 <div className={styles.row}>
                     <HeaderLink to='/' text='ABOUT ME' theme={theme} />
-                    <HeaderLink to='/github' text='GITHUB' theme={theme} />
+                    <HeaderLink to='/github' text='GITHUB REPOS' theme={theme} />
                     <HeaderLink to='/works' text='PROJECTS' theme={theme} />
                 </div>
             </header >
