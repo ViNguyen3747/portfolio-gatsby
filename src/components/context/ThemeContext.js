@@ -1,9 +1,8 @@
-import React, { createContext, useContext, useMemo } from 'react'
-import useLocalStorage from './useLocalStorage'
+import React, { createContext, useContext, useMemo, useState } from 'react'
 const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useLocalStorage('theme', 'sunny')
+    const [theme, setTheme] = useState('sunny')
 
     const handler = useMemo(
         () => ({
