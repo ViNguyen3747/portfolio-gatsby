@@ -27,7 +27,6 @@ const Project = () => {
       }
     `)
   const projects = data.allMarkdownRemark.edges
-  console.log(projects)
   return (
     <Carousel variant="dark">
       {projects.map((p, index) => (

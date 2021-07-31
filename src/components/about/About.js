@@ -31,13 +31,12 @@ const About = () => {
 
   const data = useStaticQuery(graphql`
 {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(portfolio)/"}}) {
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(about)/"}}) {
     edges {
       node {
         html
         frontmatter {
-          title
-          category
+          title          
           image {
             childImageSharp {
               fluid(maxWidth: 500) {
@@ -45,6 +44,7 @@ const About = () => {
               }
             }
           }
+          category
           tags
           subtitle
         }
