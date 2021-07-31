@@ -5,9 +5,9 @@ import { useThemeContext } from '../context/ThemeContext'
 import { tagSunny, tagGloomy } from '../../styles/tag.module.scss'
 import { container, title, text, img, subtitle } from "./about.module.scss"
 
-const Detail = ({ info, theme }) => {
-
-  const detail = info.node
+const Detail = ({ infoDetail, theme }) => {
+  console.log(infoDetail)
+  const detail = infoDetail.node
   console.log(info.node);
   return (
     <div className={container}>

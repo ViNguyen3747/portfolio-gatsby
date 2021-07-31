@@ -5,7 +5,7 @@ import React, { useState, createContext, useContext, useMemo } from 'react'
 const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
-    const defaultThemeState = (typeof window !== 'undefined' && window.localStorage.getItem('theme')) || null
+    const defaultThemeState = (typeof window !== 'undefined' && window.localStorage.getItem('theme')) || 'sunny'
 
     const [theme, setTheme] = useState(defaultThemeState)
 
