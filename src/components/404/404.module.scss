@@ -1,0 +1,31 @@
+@import '../../styles/global';
+
+@mixin rotateLetter($deg: 0deg) {
+    transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+}
+.container {
+    height: 350px; 
+    text-align: center;
+    .letter {        
+        font-size: 150px;
+        margin: 40px;
+        margin-bottom: 0;        
+        display: inline-block;
+        &:nth-child(1) {
+            @include rotateLetter(-70deg)
+        }
+        &:nth-child(2) {
+            @include rotateLetter(30deg)
+        }
+        &:nth-child(3) {
+            @include rotateLetter(100deg)
+        }
+    }
+
+    .subtitle {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+}
