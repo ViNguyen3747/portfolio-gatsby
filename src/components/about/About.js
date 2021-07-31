@@ -8,7 +8,6 @@ import { container, title, text, img, subtitle } from "./about.module.scss"
 const Detail = ({ infoDetail, theme }) => {
   console.log(infoDetail)
   const detail = infoDetail.node
-  console.log(info.node);
   return (
     <div className={container}>
       <div>
@@ -61,7 +60,7 @@ const About = () => {
 
   return (
     <>
-      <Detail info={info.find(e => e.node.frontmatter.category === theme)} theme={theme} />
+      <Detail infoDetail={info.find(e => e.node.frontmatter.category === theme)} theme={theme} />
     </>
   )
 }
