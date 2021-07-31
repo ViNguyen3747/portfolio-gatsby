@@ -11,11 +11,11 @@ const Detail = ({ infoDetail, theme }) => {
     <div className={container}>
       <div>
         <div className={title}>{detail.frontmatter.title}</div>
-        <div className={text} dangerouslySetInnerHTML={{ __html: detail.html }} />
         <div>
           {detail.frontmatter.tags.map((tag, index) =>
             <div key={index} className={theme === 'sunny' ? tagSunny : tagGloomy}>{tag}</div>)}
         </div>
+        <div className={text} dangerouslySetInnerHTML={{ __html: detail.html }} />
       </div>
       <div>
         <Img className={img} fluid={detail.frontmatter.image.childImageSharp.fluid} alt="user photo" />
